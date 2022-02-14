@@ -31,9 +31,9 @@ namespace WeatherTestsAPI.Services.Weather
             return forecastObjects;
         }
 
-        public List<RootSearch> GetSearchObjects()
+        public List<Search> GetSearchObjects()
         {
-            var searchObjects = JsonConvert.DeserializeObject<List<RootSearch>>(GetResponse("/v1/search.json?key=ee80bc25d7944df9a2d174121222501&q=mins&days=1&aqi=no&alerts=no", Method.GET).Content);
+            var searchObjects = JsonConvert.DeserializeObject<List<Search>>(GetResponse("/v1/search.json?key=ee80bc25d7944df9a2d174121222501&q=mins&days=1&aqi=no&alerts=no", Method.GET).Content);
             return searchObjects;
         }
 
